@@ -1,0 +1,53 @@
+一 js用法：html的脚本必须要位于<script></script>
+ep:
+    <script>
+			alert("hello world");
+		</script>
+（那些老旧的实例可能会在 <script> 标签中使用 type="text/javascript"。现在已经不必这样做了。JavaScript 是所有现代浏览器以及 HTML5 中的默认脚本语言。）
+
+二 脚本可以被放置在html页面的<body>和<head>里面
+ep:
+   <script>
+			document.write("hello world");
+		</script>
+    (在body写入js文本)
+
+三  JavaScript 函数放置到 HTML 页面的 <head> 部分。
+  <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function myFunction(){
+				document.getElementById('demo').innerHTML='点击出发这个函数事件';
+			}
+		</script>
+	</head>
+	<body>
+		<p id="demo">hello world</p>
+		<button type="button" onclick="myFunction()">hello world</button>
+	</body>
+</html>
+      JavaScript 函数放置到 HTML 页面的 <body> 部分。
+        <!DOCTYPE html>
+  <html>
+  	<head>
+  		<meta charset="UTF-8">
+  		<title></title>
+  	</head>
+  	<body>
+  		<p id="demo">hello world</p>
+  		<button type="button" onclick="myFunction()">hello world</button>
+  		<script>
+  			function myFunction(){
+  				document.getElementById('demo').innerHTML='点击出发这个函数事件';
+  			}
+  		</script>
+  	</body>
+  </html>
+  tips：我们把 JavaScript 放到了页面代码的底部，这样就可以确保在 <p> 元素创建之后再执行脚本。
+
+四 外部引用
+<script type="text/javascript" src="js/jquery-3.3.1.js" ></script>
+tips:将脚本放置于 <head> 或者 <body>中 实际运行效果与您在 <script> 标签中编写脚本完全一致
